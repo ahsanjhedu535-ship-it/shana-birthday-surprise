@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fff0f7">
+<meta name="description" content="A little pink-and-magical birthday surprise made with love for Sana, my Shana.">
+<title>For Sana (Shana) ♡ Birthday Magic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient" aria-hidden="true"></div>
+<header class="nav">
+  <a href="#home" class="brand"><span>♡</span> a little magic</a>
+  <button id="musicBtn" class="music-btn" aria-pressed="false"><span>♫</span> <b id="musicText">Play music</b></button>
+</header>
+<main>
+<section class="hero section" id="home">
+  <div class="badge">✦ MADE WITH ALL MY LOVE ✦</div>
+  <div class="hero-art" aria-hidden="true">
+    <span class="orb orb-a"></span><span class="orb orb-b"></span>
+    <span class="float-heart fh1">♥</span><span class="float-heart fh2">♡</span>
+    <span class="twinkle t1">✦</span><span class="twinkle t2">✧</span><span class="twinkle t3">✦</span>
+    <div class="gift"><div class="gift-lid"></div><div class="gift-bow"></div><div class="gift-box">♡</div></div>
+  </div>
+  <p class="eyebrow">A tiny corner of the internet, just for you</p>
+  <h1>For my beautiful<br><span>Sana <i>(Shana)</i></span></h1>
+  <p class="hero-copy">Someone as special as you deserves a little extra magic. I made you this little world, filled with love, smiles, memories, and wishes from my heart.</p>
+  <a class="button primary" href="#countdown">Your surprise awaits <span>↓</span></a>
+  <p class="micro">A birthday surprise, wrapped in pixels and love ✨</p>
+</section>
+
+<section class="section countdown-section" id="countdown">
+  <p class="kicker">THE BIG DAY IS ALMOST HERE</p>
+  <h2>Counting down to <em>your sparkle day</em></h2>
+  <p class="intro">October 22, 2026 — the world got a little brighter that day. 💗</p>
+  <div class="countdown" aria-label="Countdown to Sana's birthday">
+    <div class="time-card"><strong id="days">--</strong><span>days</span></div>
+    <div class="time-card"><strong id="hours">--</strong><span>hours</span></div>
+    <div class="time-card"><strong id="minutes">--</strong><span>minutes</span></div>
+    <div class="time-card"><strong id="seconds">--</strong><span>seconds</span></div>
+  </div>
+  <p id="countdownMessage" class="countdown-message" aria-live="polite">Every second brings us closer to celebrating you.</p>
+</section>
+
+<section class="section cake-section" id="cake">
+  <p class="kicker">MAKE A WISH, SHANA</p>
+  <h2>A little cake, <em>just for you</em></h2>
+  <p class="intro">Tap each candle to toggle its flame, then send your birthday wish.</p>
+  <div class="cake-stage">
+    <div class="cake-stars" aria-hidden="true">✧　·　✦　·　✧</div>
+    <div class="candles" id="candles">
+      <button class="candle" aria-label="Toggle candle one" aria-pressed="true"><i class="flame"></i><i class="wick"></i><i class="wax"></i></button>
+      <button class="candle" aria-label="Toggle candle two" aria-pressed="true"><i class="flame"></i><i class="wick"></i><i class="wax"></i></button>
+      <button class="candle" aria-label="Toggle candle three" aria-pressed="true"><i class="flame"></i><i class="wick"></i><i class="wax"></i></button>
+      <button class="candle" aria-label="Toggle candle four" aria-pressed="true"><i class="flame"></i><i class="wick"></i><i class="wax"></i></button>
+      <button class="candle" aria-label="Toggle candle five" aria-pressed="true"><i class="flame"></i><i class="wick"></i><i class="wax"></i></button>
+    </div>
+    <div class="cake">
+      <div class="cake-top"><span class="berry">♥</span><i class="sprinkle sp1"></i><i class="sprinkle sp2"></i><i class="sprinkle sp3"></i><i class="sprinkle sp4"></i><i class="sprinkle sp5"></i></div>
+      <div class="cake-body"><span>Make a wish!</span><i class="drip d1"></i><i class="drip d2"></i><i class="drip d3"></i></div>
+      <div class="cake-plate"></div>
+    </div>
+  </div>
+  <button class="button primary" id="wishBtn">✨ Send my wish!</button>
+  <p id="wishMessage" class="wish-message" aria-live="polite">May your wishes find their way to you, one by one. 💖</p>
+</section>
+
+<section class="section letter-section" id="letter">
+  <p class="kicker">A SECRET JUST FOR YOU</p>
+  <h2>One little secret for <em>Shana</em> 💌</h2>
+  <p class="intro">This letter is hidden inside a little pink envelope. Only the birthday girl knows the magic words. 💗</p>
+  <div class="secret-card" id="secretCard">
+    <div class="secret-envelope" aria-hidden="true">💌</div>
+    <p class="secret-title">A letter for my Little Princess</p>
+    <p class="secret-copy">Type your special words to unlock a message made with love, just for you.</p>
+    <form id="secretForm" class="secret-form">
+      <label for="secretWord">The magic words</label>
+      <input id="secretWord" name="secretWord" type="text" autocomplete="off" placeholder="Type: little princess 💓" required>
+      <button class="button primary" type="submit">Unlock my letter ✨</button>
+      <p id="secretFeedback" class="secret-feedback" aria-live="polite">Hint: two sweet words, princess. 👑</p>
+    </form>
+  </div>
+  <article class="letter unlocked-letter" id="unlockedLetter" hidden>
+    <div class="letter-label">♡ &nbsp; YOUR SECRET LETTER &nbsp; ♡</div>
+    <p class="dear">To my Little Princess, Shana 💓</p>
+    <p>Happy Birthday, meri pyari Shana! 💗 If I could wrap all my love into one gift, it still would not be enough to show how precious you are to me. You are not just my sister; you are one of the sweetest blessings Allah has placed in our family.</p>
+    <p>I hope life always gives you reasons to smile, people who treat your heart gently, courage for every difficult day, and beautiful opportunities to follow your dreams. Even when we tease each other or don't say it out loud, please remember that you are loved more than these little words can explain.</p>
+    <p>May Allah protect you, keep your heart peaceful, bless you with health and success, and make every coming year kinder and brighter than the last. Never stop being your lovely self, my princess. You deserve happiness that lasts far beyond your birthday.</p>
+    <p class="signoff">With endless love, duas, and hugs,<br><strong>Your loving brother ♡</strong></p>
+    <span class="stamp" aria-hidden="true">JUST<br>FOR YOU</span>
+  </article>
+  <p class="edit-hint">A tiny secret, just for you two. The magic phrase is <strong>little princess</strong>. 💓</p>
+</section>
+
+<section class="section secret-section" id="secret-letter">
+  <p class="kicker">A LITTLE SECRET, JUST FOR YOU</p>
+  <h2>Unlock your <em>special letter</em> 👑</h2>
+  <p class="intro">Some words are just for our Little Princess. Enter your magic words to open them. 💓</p>
+  <div class="secret-card">
+    <div class="secret-icon" aria-hidden="true">💌</div>
+    <label for="magicWord">Your magic words</label>
+    <input id="magicWord" type="password" placeholder="Type your secret words" autocomplete="off">
+    <button class="button primary" id="unlockLetterBtn">Unlock my letter 💗</button>
+    <p id="unlockMessage" class="wish-message" aria-live="polite"></p>
+    <article id="unlockedLetter" class="letter unlocked-letter" hidden>
+      <div class="letter-label">♡ &nbsp; FOR MY LITTLE PRINCESS &nbsp; ♡</div>
+      <p class="dear">My dearest Shana,</p>
+      <p>Happy Birthday, meri pyari behna. 💓 You will always be my Little Princess — someone whose smile can make a difficult day feel lighter. I may not say it every day, but you mean more to me than words can explain.</p>
+      <p>May Allah always protect you, keep your heart peaceful, open beautiful doors for you, and fill your life with happiness, good health, success, and endless reasons to smile. Never forget how precious you are and how deeply you are loved.</p>
+      <p>No matter how much life changes, I will always be cheering for you and praying for your happiness. Keep shining, keep dreaming, and always remember that you have a brother who loves you so much.</p>
+      <p class="signoff">Forever your brother,<br><strong>Ahsan ♡</strong></p>
+    </article>
+  </div>
+</section>
+
+<section class="section gallery-section" id="memories">
+  <p class="kicker">LITTLE MOMENTS, BIG LOVE</p>
+  <h2>Our tiny <em>memory garden</em></h2>
+  <p class="intro">A few favorite moments, saved in one little place. Tap any photo to see it bigger. 📸</p>
+  <div class="gallery">
+    <button class="photo-card" data-full="assets/shana-01.jpg"><img src="assets/shana-01.jpg" alt="Sana in a burgundy dress outdoors" loading="lazy"><span class="photo-caption">Beautiful, just being you ♡</span></button>
+    <button class="photo-card" data-full="assets/shana-02.jpg"><img src="assets/shana-02.jpg" alt="Sana in a pink traditional outfit outdoors" loading="lazy"><span class="photo-caption">A little pink magic 🌸</span></button>
+    <button class="photo-card" data-full="assets/shana-03.jpg"><img src="assets/shana-03.jpg" alt="Portrait of Sana in a pink outfit" loading="lazy"><span class="photo-caption">Your lovely smile ✨</span></button>
+    <button class="photo-card" data-full="assets/shana-04.jpg"><img src="assets/shana-04.jpg" alt="Sana wearing a bright pink dupatta" loading="lazy"><span class="photo-caption">Our Shana 💗</span></button>
+    <button class="photo-card" data-full="assets/shana-05.jpg"><img src="assets/shana-05.jpg" alt="Sana in a burgundy dress at an outdoor event" loading="lazy"><span class="photo-caption">A memory to keep 🌷</span></button>
+    <button class="photo-card" data-full="assets/shana-06.jpg"><img src="assets/shana-06.jpg" alt="A favorite portrait of Sana" loading="lazy"><span class="photo-caption">Forever special ♡</span></button>
+    <button class="photo-card wide" data-full="assets/family-memories.jpg"><img src="assets/family-memories.jpg" alt="A family and friends group memory" loading="lazy"><span class="photo-caption">The people and moments we keep close 🫶</span></button>
+  </div>
+  <div class="modal" id="photoModal" aria-hidden="true" role="dialog" aria-label="Photo viewer">
+    <button class="modal-close" id="modalClose" aria-label="Close photo">×</button><img id="modalImage" src="" alt="Expanded memory">
+  </div>
+</section>
+
+<section class="section video-section" id="video" hidden>
+  <p class="kicker">ONE MORE MEMORY</p><h2>A little <em>moving memory</em></h2>
+  <video controls playsinline preload="metadata" src="assets/birthday-memory.mp4"></video>
+</section>
+
+<section class="section finale">
+  <div class="final-heart">♡</div>
+  <p class="kicker">ONE LAST THING…</p>
+  <h2>You are a gift, <em>Sana.</em></h2>
+  <p>No website could ever fit all the love I have for you, but I hope this little surprise reminds you that you are celebrated today, tomorrow, and always.</p>
+  <button class="button primary" id="confettiBtn">Make it rain hearts 💗</button>
+  <p class="final-signoff">Happy Birthday, Shana! ✨</p>
+</section>
+</main>
+<footer class="footer"><span>Made with ♡, just for Sana</span><span>October 22, 2026</span></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
