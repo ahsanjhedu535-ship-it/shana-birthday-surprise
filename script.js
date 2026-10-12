@@ -93,33 +93,11 @@
   modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-  // Optional gentle synthesized chime; no copyrighted audio or external audio file required.
-  let audioCtx = null, musicOn = false, musicTimer = null, noteIndex = 0;
-  const notes = [523.25, 659.25, 783.99, 659.25, 587.33, 698.46, 783.99, 698.46];
-  function playNote() {
-    if (!musicOn || !audioCtx) return;
-    const osc = audioCtx.createOscillator(), gain = audioCtx.createGain();
-    osc.type = 'sine'; osc.frequency.value = notes[noteIndex++ % notes.length];
-    gain.gain.setValueAtTime(0.0001, audioCtx.currentTime);
-    gain.gain.exponentialRampToValueAtTime(0.055, audioCtx.currentTime + .05);
-    gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + .65);
-    osc.connect(gain); gain.connect(audioCtx.destination);
-    osc.start(); osc.stop(audioCtx.currentTime + .7);
-  }
-  $('musicBtn').addEventListener('click', async () => {
-    if (!musicOn) {
-      try {
-        const AudioContext = window.AudioContext || window.webkitAudioContext;
-        if (!AudioContext) { toast('Audio is not supported in this browser.'); return; }
-        audioCtx = audioCtx || new AudioContext();
-        if (audioCtx.state === 'suspended') await audioCtx.resume();
-        musicOn = true; playNote(); musicTimer = setInterval(playNote, 720);
-        $('musicText').textContent = 'Pause music'; $('musicBtn').setAttribute('aria-pressed', 'true');
-      } catch (e) { toast('Tap again to enable sound in your browser.'); }
-    } else {
-      musicOn = false; clearInterval(musicTimer);
-      $('musicText').textContent = 'Play music'; $('musicBtn').setAttribute('aria-pressed', 'false');
-    }
+  // The music button takes visitors to the embedded Guzarish player.
+  const musicBtn = $('musicBtn');
+  if (musicBtn) musicBtn.addEventListener('click', () => {
+    const song = document.querySelector('#song');
+    if (song) song.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
   // Show the video section only when the optional uploaded clip is included.

@@ -12,7 +12,7 @@ October 22, 2026.
 - Confetti/hearts effect
 - A heartfelt birthday letter
 - Personal photo gallery with tap-to-enlarge viewer
-- Play/pause button for a gentle synthesized chime (no external music download needed)
+- Local MP3 player for “Guzarish” by Satinder Sartaaj (`assets/guzarish.mp3`); visitors tap Play
 - Your uploaded photos in `assets/`
 - Optional uploaded video at `assets/birthday-memory.mp4` (if present)
 
@@ -36,7 +36,7 @@ Open `index.html` and edit the paragraphs inside `<article class="letter">`. Rep
 Current photos are in `assets/`. Gallery cards in `index.html` use image paths like `assets/shana-01.jpg`. To change a photo, replace the corresponding file while keeping the same filename, or update both `src` and `data-full` in the relevant gallery button. Keep filenames simple and use lowercase letters/numbers/hyphens.
 
 ## Notes
-- The audio button makes a soft synthesized chime with the browser's Web Audio API; it is not a full commercial birthday song.
+- “Guzarish” is played from the bundled file `assets/guzarish.mp3`. Keep the MP3 in the `assets` folder when uploading the site. Make sure you have permission to use/distribute the audio.
 - No analytics, forms, paid services, server, API key, or account connection are used.
 - Please share the site and family photos thoughtfully; anyone with the public website link may be able to view its contents.
 
